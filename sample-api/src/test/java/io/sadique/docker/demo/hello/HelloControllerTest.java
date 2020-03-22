@@ -22,7 +22,7 @@ public class HelloControllerTest {
 
 	@Test
 	public void getHello() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/hello").contentType(MediaType.APPLICATION_JSON))
+		mvc.perform(MockMvcRequestBuilders.get("/hello?name=world").contentType(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk());
 	}
 }
